@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Space+Mono&display=swap");
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
+  padding: 30px 30px;
+  width: 60%;
+}
+
+.container h4 {
+  font-size: 1rem;
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+}
+.number h4 {
+  position: relative;
+}
+
+h4 .error {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+p {
+  color: hsla(180, 37%, 97%, 0.568);
+}
+
+/* Tax Display */
+.tax-display {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  padding: 80px 30px;
+  color: white;
+  margin-left: 10px;
+  margin: auto 0;
+}
+
+.tip-amt {
+  position: relative;
+  margin: 0 0 50px;
+}
+.total-amt {
+  position: relative;
+  margin-bottom: 80px;
+}
+.amount {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  font-size: 3rem;
+  top: 0;
+  color: hsl(172, 67%, 45%);
+  font-weight: bold;
+  transform: translateY(-20%);
+}
+
+/* Tax Calculator  */
+.tax-calculator {
+  margin: 15px;
+}
+
+.tax-calc-input {
+  width: 100%;
+  text-align: right;
+  padding: 5px;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  font-size: 1.5rem;
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.bill-input {
+  background-image: url("icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 3%;
+  cursor: pointer;
+}
+
+.bill-input:focus {
+  border: 3px solid hsl(172, 67%, 45%);
+}
+
+.number-input {
+  background-image: url("icon-person.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 3%;
+  cursor: pointer;
+}
+.number-input.wrong {
+  border: 3px solid rgba(255, 0, 0, 0.561);
+}
+
+.number {
+  margin: 20px 0;
+}
+
+.tax-calc-input:focus {
+  outline: none;
+}
+.tax-calc-input::placeholder {
+  text-align: left;
+  font-weight: normal;
+}
+
+/* Buttons */
+.btn-tip {
+  margin: 35px 0 30px;
+  width: 100%;
+  padding: 0;
+}
+
+.btn-tips {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  padding: 5px 44px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: 0;
+}
+/* Input tips  */
+.btn-tips.custom {
+  padding: 5px 18px;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  text-align: right;
+}
+.hover-class.custom:hover {
+  background-color: transparent;
+}
+.btn-tips.double {
+  padding: 5px 37px;
+}
+
+.btn-tips:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.btn.active {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.btn-reset {
+  margin: 70px 0 0;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 0;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.btn-reset:focus {
+  outline: none;
+}
+.btn-reset:focus {
+  background-color: hsl(172, 67%, 45%);
+  outline: none;
+  border: 0;
+}
+
+.btn-reset:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+
+.submit-btn {
+  text-align: right;
+}
+/* Responsiveness */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    margin-top: 400px;
+    border-radius: 15px 15px 3px 3px;
+  }
+  .container h4 {
+    font-size: 0.9rem;
+  }
+  .tax-display {
+    padding-bottom: 20px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .tip-amt {
+    font-size: 0.8rem;
+  }
+
+  .total-amt {
+    font-size: 0.8rem;
+  }
+
+  .amount {
+    font-size: 2rem;
+  }
+  .btn-tip {
+    width: 100%;
+  }
+  .btn-tips {
+    padding: 5px 52px;
+  }
+  .btn-tips.double {
+    padding: 5px 45px;
+  }
+
+  .btn-tips.custom {
+    padding: 5px 15px;
+    width: 95%;
+    text-align: center;
+  }
+  .btn-reset {
+    margin: 0;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .total-amt {
+    margin: 50px 0;
+  }
+}
